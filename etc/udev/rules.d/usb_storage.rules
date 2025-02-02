@@ -1,0 +1,6 @@
+##############################################################################################################
+# USB-Board which uses usb connection
+#
+KERNEL=="sd[a-z]", SUBSYSTEM=="block", SUBSYSTEMS=="usb", DRIVERS=="usb", ACTION=="add", RUN+="/etc/usb/usb_storage.sh %k 1 0 $attr{serial}"
+KERNEL=="sd[a-z]", SUBSYSTEM=="block", SUBSYSTEMS=="usb", DRIVERS=="usb", ACTION=="remove", RUN+="/etc/usb/usb_storage.sh %k 0 0 $attr{serial}"
+

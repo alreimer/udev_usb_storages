@@ -1,0 +1,8 @@
+Automaticly mounting and umounting of usb storages to the computer via udev.
+In /etc/usb/known_usb is list of devices with serialNumber.
+After copying theose files it is neccesary to update udev rules in database:
+
+$udevadm hwdb --update
+
+
+before unmounting of usb device - it must by flushing by using sync command.
