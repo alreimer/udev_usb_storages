@@ -6,3 +6,5 @@ $udevadm hwdb --update
 
 
 before unmounting of usb device - it must by flushing by using sync command.
+
+ADDON: added support like 'usbfs' to /run/devices (it is simmulare to old /proc/bus/usb/devices). It is used by my projects like 'USB-Board' and 'httpd_nh221'
